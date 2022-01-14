@@ -3,6 +3,10 @@ import * as path from 'path';
 
 const app = express();
 
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve('./index.html'));
+});
+
 app.get('/download/file.html', (req, res) => {
     res.set('Content-Disposition', 'attachment; filename=file.html');
     res.sendFile(path.resolve('./file.html'));
