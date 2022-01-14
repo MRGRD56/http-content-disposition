@@ -9,7 +9,7 @@ app.get('/download/file.html', (req, res) => {
 });
 
 app.get('/view/file.html', (req, res) => {
-    res.set('Content-Disposition', 'inline'); //значение по умолчанию
+    res.set('Content-Disposition', 'inline'); //default value
     res.sendFile(path.resolve('./file.html'));
 });
 
